@@ -7,6 +7,11 @@ const Create = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
+        ...formData,
+        email:"aopo56@gmail.com"
+    })
+
+    setFormData({
       ...formData,
       [name]: value,
     });
@@ -69,20 +74,6 @@ const Create = () => {
             name="price"
             value={formData.price}
             required
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            required
-            value={formData.email}
             onChange={handleChange}
           />
         </div>
